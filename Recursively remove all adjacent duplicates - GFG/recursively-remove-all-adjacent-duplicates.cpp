@@ -20,7 +20,7 @@ public:
                 flag = 1;
                 i++;
             }
-            if(i > 0 && s[i] != s[i-1])
+            if( s[i] != s[i-1])
                 ans.push_back(s[i]);
         }
         if(flag == 0)
