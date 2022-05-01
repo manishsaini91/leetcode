@@ -10,14 +10,16 @@ public:
             if(!mp[nums[i]])
                 mp[nums[i]]=1;
             else{
-                mp[nums[i]]++;   
+                mp[nums[i]]++;
+                // if(mp[nums[i]]>n/2)
+                    // flag=nums[i];
             }
             
         }
         for(int i=0;i<n;i++){
             if(mp[nums[i]]>n/2){
                 flag=nums[i];
-                // break;
+                break;
             }
         }
         return flag;
