@@ -20,14 +20,14 @@ class Solution
       }
       long long int ans=0;
       for(int i=0;i<k;i++){
-          if(i!=k-i){      // if k=10 then 45 and 55 gives same remainder then we have to deal with that seperately
+          if(i!=k-i){      
               ans+=m[i]*(m[k-i]);
           }
           else
           ans+=m[i]*(m[i]-1);
       }
       ans/=2;
-      ans+= (m[0]*(m[0]-1))/2;  // if remainder is zero.
+      ans+= (m[0]*(m[0]-1))/2; 
       return ans;
    }
 };
