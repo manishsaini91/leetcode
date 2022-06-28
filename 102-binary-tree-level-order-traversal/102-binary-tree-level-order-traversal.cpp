@@ -24,7 +24,7 @@ public:
             if (q.front()->right) { q.push(q.front()->right); }
             row.push_back(q.front()->val), q.pop();
             if (--count == 0) {
-                result.emplace_back(row), row.clear();
+                result.push_back(row), row.clear();
                 count = q.size();
             }
         }
