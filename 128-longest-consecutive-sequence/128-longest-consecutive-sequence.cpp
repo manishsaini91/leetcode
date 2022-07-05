@@ -1,15 +1,27 @@
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
-        unordered_set<int> s(begin(nums), end(nums)); // inserting all elements into hashset
-	int longest = 0;
-	for(auto& num : s) {
-		int cur_longest = 1;
-		// find consecutive elements in the backward and forward direction from num
-		for(int j = 1; s.count(num - j); j++) s.erase(num - j), cur_longest++;
-		for(int j = 1; s.count(num + j); j++) s.erase(num + j), cur_longest++;
-		longest = max(longest, cur_longest);  // update longest to hold longest consecutive sequence till now
-	}
-	return longest;
+        int n = nums.size();
+        if(n==0){
+            return 0;
+        }
+        sort(nums.begin(),nums.end());
+        int count=1;
+        int maxx = 1;
+        
+        for(int i=1;i<n;i++){
+            if(nums[i] == nums[i-1]){
+                continue;
+            }
+            
+            if(nums[i]-nums[i-1] == 1){
+                count++;
+                maxx = max(count,maxx);
+            }
+            else{
+                count=1;
+            }
+        }
+        return maxx;
     }
 };
