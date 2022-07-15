@@ -7,7 +7,7 @@ using namespace std;
 class Solution{
 public:
     int *findTwoElement(int *arr, int n) {
-        int *vi=new int[2];
+    int *vi=new int[2];
        vector<int> v(n+1,0); 
     for(int i=0;i<n;i++){
        v[arr[i]]+=1;
