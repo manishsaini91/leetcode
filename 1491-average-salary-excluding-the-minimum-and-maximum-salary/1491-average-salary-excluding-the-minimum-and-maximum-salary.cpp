@@ -8,11 +8,12 @@ public:
         int mini=INT_MAX;
         for(int i=0;i<x;i++){
             maxi=max(maxi,salary[i]);
-        }
-        
-        for(int i=0;i<x;i++){
             mini=min(mini,salary[i]);
         }
+        
+        // for(int i=0;i<x;i++){
+            // mini=min(mini,salary[i]);
+        // }
         // cout<<minele<<" "<<maxele;
         double sum=0.000;
         int  count=0;
