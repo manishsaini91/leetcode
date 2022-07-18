@@ -20,7 +20,7 @@ class Solution {
         }
         
         
-        head=pre;
-        return head;// code here
+        return pre;
+        // return head;// code here
     }
 }
