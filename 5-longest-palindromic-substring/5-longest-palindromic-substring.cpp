@@ -19,9 +19,9 @@ public:
         string ans = "";
         ans += s[0];
 
-        for (int i = n - 1; i >= 0; i--)
+        for (int i = n-1; i >=0; i--)
         {
-            for (int j = i + 1; j < n; j++)
+            for (int j = i + 1; j <n; j++)
             {
                 if (s[i] == s[j])
                 {
