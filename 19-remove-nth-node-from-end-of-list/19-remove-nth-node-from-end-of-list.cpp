@@ -23,10 +23,7 @@ public:
         if(n==count){
             return head->next;
         }
-        // if(count==2 and n==2){
-            // head=head->next;
-            // return head;
-        // }
+
         if(count==2 and n==1){
             head->next=NULL;
             return head;
